@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>138_CSS_浮动布局练习</title>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="nav">
+            <div class="left-fix logo">logo</div>
+            <div class="left-fix banner1">banner1</div>
+            <div class="left-fix banner2">banner2</div>
+        </div>
+        <div class="left-fix menu">menu</div>
+    </div>
+    <div class="main">
+        <div class="left-fix left-main">
+            <div class="clear-fix left-top-main">
+                <div class="left-fix lanmu lanmu1">栏目一</div>
+                <div class="left-fix lanmu lanmu2">栏目二</div>
+            </div>
+            <div class=" left-bottom-main">
+                <div class="left-fix lanmu lanmu3">栏目三</div>
+                <div class="left-fix lanmu lanmu4">栏目四</div>
+                <div class="left-fix lanmu lanmu5">栏目五</div>
+                <div class="left-fix lanmu lanmu6">栏目六</div>
+            </div>
+        </div>
+        <div class="right-fix right-main">
+            <div class="lanmu lanmu7">栏目七</div>
+            <div class="lanmu lanmu8">栏目八</div>
+            <div class="lanmu lanmu9">栏目九</div>
+        </div>
+    </div>
+    <div class="left-fix footer">页脚</div>
+</div>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .left-fix {
+        float: left;
+    }
+    .right-fix {
+        float: right;
+    }
+    .clear-fix::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .container {
+        width: 960px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .logo {
+        width: 200px;
+        margin-right: 10px;
+    }
+    .banner1 {
+        width: 540px;
+        margin-right: 10px;
+    }
+    .banner2 {
+        width: 200px;
+    }
+    .logo, .banner1, .banner2 {
+        height: 80px;
+        line-height: 80px;
+        background-color: #ccc;
+    }
+    .menu {
+        height: 30px;
+        line-height: 30px;
+        width: 960px;
+        background-color: #ccc;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .lanmu {
+        border: 1px solid black;
+    }
+    .lanmu1, .lanmu2 {
+        height: 198px;
+        line-height: 198px;
+        width: 368px;
+    }
+    .lanmu2 {
+        margin-left: 10px;
+    }
+    .lanmu3, .lanmu4, .lanmu5, .lanmu6 {
+        height: 198px;
+        line-height: 198px;
+        width: 178px;
+    }
+    .lanmu3, .lanmu4, .lanmu5 {
+        margin-right: 10px;
+    }
+    .lanmu7, .lanmu8, .lanmu9 {
+        height: 128px;
+        line-height: 128px;
+        width: 198px;
+    }
+    .lanmu7 {
+        margin-bottom: 10px;
+    }
+    .lanmu8 {
+        margin-bottom: 10px;
+    }
+    .left-bottom-main {
+        margin-top: 10px;
+    }
+    .footer {
+        height: 60px;
+        line-height: 60px;
+        width: 960px;
+        background-color: #ccc;
+        margin-top: 10px;
+    }
+</style>
