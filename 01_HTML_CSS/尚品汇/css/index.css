@@ -1,0 +1,389 @@
+/* 基础设置 */
+.container {
+    margin: 0 auto;
+    width: 1190px;
+}
+/*#region 顶部导航条start */
+.top-bar {
+    height: 30px;
+    background-color: #ECECEC;
+}
+.welcome {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0;
+    color: #666666;
+}
+.welcome span, .welcome a {
+    font-size: 12px;
+}
+.welcome .hello {
+    margin-right: 28px;
+}
+.welcome .login {
+    padding-right: 10px;
+    border-right: 1px solid #666666;
+}
+.welcome .register {
+    padding-left: 10px;
+}
+.top-bar-nav .list {
+    height: 30px;
+    line-height: 30px;
+}
+.top-bar-nav .list li {
+    float: left;
+}
+.top-bar-nav .list li a {
+    padding: 0 15px;
+    border-right: 1px solid #666666;
+}
+.top-bar-nav .list li:first-child a{
+    padding-left: 0;
+}
+.top-bar-nav .list li:last-child a{
+    padding-right: 0;
+    border: 0;
+}
+
+/*#endregion 顶部导航条end */
+
+/*#region 头部start */
+.header {
+    height: 120px;
+}
+.header .search form {
+    margin-top: 42px;
+    font-size: 0;
+}
+.header .search form input {
+    width: 508px;
+    height: 34px;
+    border: 1px solid #DD302D;
+}
+.header .search form button {
+    height: 36px;
+    width: 80px;
+    background-color: #DD302D;
+    vertical-align: top;
+    background-image: url("../images/serch_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*#endregion 头部end */
+
+/*#region 主导航start*/
+.menu-nav {
+    height: 48px;
+    border-bottom: 1px solid #DD302D;
+}
+.menu-nav .all-types {
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    width: 190px;
+    background-color: #DD302D;
+    color: #fff;
+    font-size: 16px;
+}
+.menu-nav .nav-list {
+    height: 48px;
+    line-height: 48px;
+}
+.menu-nav .nav-list li {
+    float: left;
+    font-size: 16px;
+}
+.menu-nav .nav-list li a {
+    padding: 0 10px;
+}
+/*#endregion 主导航end*/
+
+/*#region 主要内容区start*/
+.main-content {
+    margin: 10px 0;
+}
+.main-content .side-nav {
+    height: 458px;
+    width: 190px;
+    background-color: #F4F4F4;
+    position: relative;
+}
+.main-content .side-nav li {
+    padding-left: 16px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #333333;
+}
+.main-content .side-nav li:hover {
+    background-color: #DD302D;
+}
+.main-content .side-nav li>a:hover {
+    color: white;
+}
+.main-content .side-nav li:hover .second-menu {
+    display: block;
+}
+.main-content .side-nav .second-menu {
+    height: 458px;
+    width: 700px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 190px;
+    display: none;
+}
+.main-content .side-nav .second-menu dl {
+    height: 36px;
+    line-height: 36px;
+}
+.main-content .side-nav .second-menu dl:first-child {
+    margin-top: 10px;
+}
+.main-content .side-nav .second-menu dt {
+    width: 70px;
+    float: left;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.main-content .side-nav .second-menu dd {
+    float: left;
+}
+.main-content .side-nav .second-menu dd a {
+    padding: 0 10px;
+    border-left: 1px solid #666666;
+}
+.main-content .slide {
+    height: 458px;
+    width: 690px;
+    margin: 0 10px;
+}
+.main-content .side-other {
+    height: 458px;
+    width: 290px;
+}
+.main-content .side-other .message {
+    height: 156px;
+    width: 260px;
+    padding: 0 14px;
+    border: 1px solid #D9D9D9;
+}
+.side-other .message .title {
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.side-other .message .msg-list li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.main-content .side-other .other-nav {
+    margin-top: 10px;
+    padding: 5px;
+}
+.main-content .side-other .other-nav .other-nav-list:first-child {
+    padding-top: 11px;
+}
+.main-content .side-other .other-nav .other-nav-list:nth-child(2) {
+    margin: 17px 0;
+}
+.main-content .side-other .other-nav .other-nav-list li {
+    width: 48px;
+    height: 70px;
+    margin: 0 11px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+.other-nav-list .picture {
+    background-image: url("../images/精灵图-侧边功能.png");
+    width: 48px;
+    height: 48px;
+}
+.other-nav-list li span {
+    font-size: 14px;
+}
+.other-nav-list:nth-child(1) li:nth-child(1) .picture {
+    background-position: 0 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(2) .picture {
+    background-position: -48px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(3) .picture {
+    background-position: -96px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(4) .picture {
+    background-position: -144px 0;
+}
+.other-nav-list:nth-child(2) li:nth-child(1) .picture {
+    background-position: 0 -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(2) .picture {
+    background-position: -48px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(3) .picture {
+    background-position: -96px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(4) .picture {
+    background-position: -144px -48px;
+}
+.other-nav-list:nth-child(3) li:nth-child(1) .picture {
+    background-position: 0 -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(2) .picture {
+    background-position: -48px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(3) .picture {
+    background-position: -96px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(4) .picture {
+    background-position: -144px -96px;
+}
+/*#endregion 主要内容区end*/
+
+/*#region 秒杀start*/
+.seckill img {
+    float: left;
+    margin-right: 11px;
+}
+.seckill img:last-child {
+    margin-right: 0;
+}
+/*#endregion 秒杀end*/
+
+/*#region 楼层start*/
+.floor-nav {
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-bottom: 4px;
+}
+.floor-nav .floor-title {
+    font-size: 20px;
+}
+.floor-nav-list li {
+    float: left;
+}
+.floor-nav-list li a {
+    padding: 0 10px;
+    border-right: 1px solid #666666;
+}
+.floor-nav-list li:first-child a {
+    padding-left: 0;
+}
+.floor-nav-list li:last-child a {
+    padding-right: 0;
+    border-right: 0;
+}
+.floor .line {
+    height: 2px;
+    background-color: #DD302D;
+}
+.floor-content .item {
+    float: left;
+    height: 432px;
+    cursor: pointer;
+}
+.floor-content .item1 {
+    width: 228px;
+    background-color: #F4F4F4;
+}
+.floor-content .item1-list {
+    margin: 20px;
+    font-size: 16px;
+}
+.floor-content .item1-list li {
+    width: 90px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #D9D9D9;
+}
+.floor-content .item1-list li:nth-child(2n-1) {
+    float: left;
+}
+.floor-content .item1-list li:nth-child(2n) {
+    float: right;
+}
+.floor-content .item1 img {
+    margin: 10px auto;
+}
+.floor-content .item2 {
+    width: 340px;
+}
+.floor-content .item3,
+.floor-content .item4,
+.floor-content .item5 {
+    width: 206px;
+}
+.floor-content .item3 img,
+.floor-content .item4,
+.floor-content .item5 img {
+    border-bottom: 1px solid #E2E2E2;
+}
+.floor-content .item4 {
+    border-left: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+}
+/*#endregion 楼层end*/
+
+/*#region 页脚start*/
+.footer {
+    height: 440px;
+    background-color:  #483E3E;
+    margin-top: 48px;
+}
+.footer .top-links .links-list {
+    width: 190px;
+    height: 176px;
+    float: left;
+    font-size: 14px;
+    margin-top: 48px;
+    margin-right: 10px;
+}
+.footer .top-links .links-list:last-child {
+    margin-right: 0;
+}
+.footer .top-links .links-list li {
+    padding: 2px 0;
+}
+.footer .top-links .links-list li a {
+    color: #ffffff;
+}
+.footer .line{
+    height: 2px;
+    margin-top: 30px;
+    background-color: #584D4D;
+}
+.footer .bottom-links {
+    text-align: center;
+}
+.footer .bottom-links .bottom-links-list {
+    margin-top: 48px;
+    display: inline-block;
+}
+.footer .bottom-links .bottom-links-list li {
+    float: left;
+}
+.footer .bottom-links .bottom-links-list li a {
+    padding: 0 26px;
+    color: #ffffff;
+    border-right: 1px solid #DEDEDE;
+}
+.footer .bottom-links .bottom-links-list li:first-child a {
+    padding-left: 0;
+}
+.footer .bottom-links .bottom-links-list li:last-child a {
+    padding-right: 0;
+    border-right: 0;
+}
+.footer .bottom-links .copyright {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+}
+/*#endregion 页脚end*/
