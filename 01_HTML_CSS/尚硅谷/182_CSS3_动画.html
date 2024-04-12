@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>182_CSS3_动画</title>
+    <style>
+        div {
+            width: 130px;
+            height: 130px;
+            margin: 100px auto;
+            background-image: url("./images/bike.png");
+            animation: bike 0.6s steps(31) infinite;
+        }
+        @keyframes bike {
+            from{}
+            to {
+                background-position: 0 -4030px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
