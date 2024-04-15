@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>106_闭包</title>
+    <script>
+        /*
+            构成闭包的条件
+                1. 函数的嵌套
+                2. 内部函数要引用外部函数的变量
+                3. 内部函数要作为返回值返回
+            闭包在外部函数调用时，外部函数每次调用都会产生一个全新的闭包
+            在内部函数丢失时销毁（内部函数被垃圾回收了，闭包才会消失）
+
+         */
+        function outer() {
+            let num = 0;
+
+            return () => {
+                num++;
+                console.log(num);
+            };
+        }
+
+        const newFn1 = outer();
+        newFn1();
+        newFn1();
+        newFn1();
+        const newFn2 = outer();
+        newFn2();
+        newFn2();
+        newFn2();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
