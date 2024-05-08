@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #result {
+            width: 200px;
+            height: 200px;
+            border: solid 1px skyblue;
+        }
+    </style>
+</head>
+<body>
+    <button id="click">Click here</button>
+    <div id="result"></div>
+    
+    <script>
+        const btn = document.getElementById('click');
+        btn.onclick = function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://localhost:3000/server');
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr < 300) {
+                        console.log(xhr.status);
+                        console.log(xhr.statusText);
+                        console.log(xhr.getAllResponseHeaders());
+                        console.log(xhr.response);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
