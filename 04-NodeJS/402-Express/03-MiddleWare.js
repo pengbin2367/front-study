@@ -27,7 +27,7 @@ app.post('/login', urlencodedParser, (req, res) => {
     res.send('Get user input');
 })
 
-app.use(express.static('../../03_Less/ShangYouXuan'));
+app.use(express.static('../../03-Less/ShangYouXuan'));
 
 function recordMiddleware(req, res, next){
     let { url, ip } = req;
