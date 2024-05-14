@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="module">
+        import * as ex from './10-export.js';
+        console.log(ex);
+
+        import { user, teach } from './10-export.js';
+        console.log(user);
+        console.log(teach);
+        import { user as u1, teach as t1 } from './10-export.js';
+        console.log(u1);
+        console.log(t1);
+        // import { default as u2 } from './10-export.js'
+
+        // import u3 from './10-export.js'      only export default
+    </script>
+    
+    <!-- 11-app.js -->
+    <!-- <script src="11-app.js" type="module"></script> -->
+</body>
+</html>

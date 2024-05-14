@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Phone {
+            constructor(brand, price) {
+                this.brand = brand;
+                this.price = price;
+            }
+            call() {
+                console.log("call me");
+            }
+        }
+        class SmartPhone extends Phone {
+            constructor(brand, price, color, size) {
+                super(brand, price);
+                this.color = color;
+                this.size = size;
+            }
+            photo() {
+                console.log("take photo");
+            }
+            playGame() {
+                console.log("play game");
+            }
+        }
+        const xiaomi = new SmartPhone("xiaomi", 9999, "red", "9inch");
+        xiaomi.call();
+        xiaomi.photo();
+        xiaomi.playGame();
+    </script>
+</body>
+</html>
