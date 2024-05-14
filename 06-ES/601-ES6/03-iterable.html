@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const blg = {
+            name: 'BiliBili Gaming',
+            members: [
+                'Bin',
+                'Xun',
+                'Knight',
+                'Elk',
+                'On'
+            ],
+            [Symbol.iterator]() {
+                let _this = this;
+                let index = 0;
+                return {
+                    next: function() {
+                        if (index < _this.members.length) {
+                            const result = { value: _this.members[index], done: false };
+                            index++;
+                            return result;
+                        } else {
+                            return { value: undefined, done: true };
+                        }
+                    }
+                }
+            }
+        };
+
+        for (let b of blg) {
+            console.log(b);
+        }
+    </script>
+</body>
+</html>

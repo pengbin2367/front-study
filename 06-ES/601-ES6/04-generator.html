@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function one() {
+            setTimeout(() => {
+                console.log(111);
+                iterator.next();
+            }, 1000);
+        }
+        function two() {
+            setTimeout(() => {
+                console.log(222);
+                iterator.next();
+            }, 2000);
+        }
+        function three() {
+            setTimeout(() => {
+                console.log(333);
+                iterator.next();
+            }, 3000);
+        }
+        function* gen() {
+            yield one();
+            yield two();
+            yield three();
+        }
+        let iterator = gen();
+        iterator.next();
+
+        function getUsers() {
+            setTimeout(() => {
+                let data = 'users data';
+                iterator2.next(data);
+            }, 1000);
+        }
+        function getOrders() {
+            setTimeout(() => {
+                let data = 'orders data';
+                iterator2.next(data);
+            }, 1000);
+        }
+        function getGoods() {
+            setTimeout(() => {
+                let data = 'goods data';
+                iterator2.next(data);
+            }, 1000);
+        }
+        function* genera() {
+            let users = yield getUsers();
+            console.log(users);
+            let orders = yield getOrders();
+            console.log(orders);
+            let goods = yield getGoods();
+            console.log(goods);
+        }
+        let iterator2 = genera();
+        iterator2.next();
+    </script>
+</body>
+</html>
