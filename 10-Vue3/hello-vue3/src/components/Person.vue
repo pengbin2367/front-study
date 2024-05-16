@@ -8,15 +8,17 @@
   </div>
 </template>
 
-<script setup lang="ts" name="Person234">
-let name = "zhang-san";
-let age = 23;
+<script setup lang="ts" name="Person">
+import { ref } from 'vue'
+
+let name = ref("zhang-san");
+let age = ref(23);
 let tel = 1234567890;
 function changeName() {
-  name = "zhang-san-update";
+  name.value = "zhang-san-update";
 }
 function changeAge() {
-  age++;
+  age.value++;
 }
 function showTel() {
   alert(tel);
