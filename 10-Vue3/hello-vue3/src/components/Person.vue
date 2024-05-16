@@ -10,19 +10,19 @@
 </template>
 
 <script setup lang="ts" name="Person">
-  import { reactive } from 'vue'
-  let car = reactive({ band: 'benchi', price: 100 })
-  let games = reactive([
+  import { ref } from 'vue'
+  let car = ref({ band: 'benchi', price: 100 })
+  let games = ref([
     { id:"1", name:"game1" },
     { id:"2", name:"game2" },
     { id:"3", name:"game3" },
     { id:"4", name:"game4" }
   ])
   function changePrice() {
-    car.price += 10;
+    car.value.price += 10;
   }
   function changeGame() {
-    games[0].name = "game1 update"
+    games.value[0].name = "game1 update"
   }
 </script>
 
