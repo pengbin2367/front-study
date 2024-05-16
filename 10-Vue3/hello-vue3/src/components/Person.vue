@@ -61,6 +61,12 @@ import {reactive, ref, watch, watchEffect} from 'vue'
       console.log(6666666666666666)
     }
   })
+
+  let a = ref(0)
+  let b = ref(1)
+  let c = ref(2)
+  // use defineExpose func to expose to parent
+  defineExpose({a,b,c})
 </script>
 
 <style scoped>

@@ -1,14 +1,13 @@
 <template>
   <div class="app">
-    <Person />
+    <Person ref="person" />
   </div>
 </template>
 
-<script lang="ts">
-import Person from './components/Person.vue'
+<script lang="ts" setup name="App">
+  import Person from './components/Person.vue'
+  import {ref} from "vue";
 
-export default {
-  name: 'App', //组件名
-  components: { Person } //注册组件
-}
+  let person = ref()
+  console.log(person.value);
 </script>
