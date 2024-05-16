@@ -1,28 +1,29 @@
 <template>
   <div class="person">
-    <h2>姓名：{{ name }}</h2>
-    <h2>年龄：{{ age }}</h2>
-    <button @click="changeName">修改名字</button>
-    <button @click="changeAge">修改年龄</button>
-    <button @click="showTel">查看联系方式</button>
+    <h1>one {{ car.band }} car, price {{ car.price }} w</h1>
+    <button @click="changePrice">update car price</button>
+    <br>
+    <h1>Games</h1>
+    <li v-for="g in games" :key="g.id">{{ g.name }}</li>
+    <button @click="changeGame">update</button>
   </div>
 </template>
 
 <script setup lang="ts" name="Person">
-import { ref } from 'vue'
-
-let name = ref("zhang-san");
-let age = ref(23);
-let tel = 1234567890;
-function changeName() {
-  name.value = "zhang-san-update";
-}
-function changeAge() {
-  age.value++;
-}
-function showTel() {
-  alert(tel);
-}
+  import { reactive } from 'vue'
+  let car = reactive({ band: 'benchi', price: 100 })
+  let games = reactive([
+    { id:"1", name:"game1" },
+    { id:"2", name:"game2" },
+    { id:"3", name:"game3" },
+    { id:"4", name:"game4" }
+  ])
+  function changePrice() {
+    car.price += 10;
+  }
+  function changeGame() {
+    games[0].name = "game1 update"
+  }
 </script>
 
 <style scoped>
