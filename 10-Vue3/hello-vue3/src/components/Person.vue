@@ -1,19 +1,23 @@
 <template>
   <div class="person">
-    FirstName: <input type="text" v-model="firstName" /><br>
-    LastName: <input type="text" v-model="lastName" /> <br>
-    Name: <span>{{fullName}}</span> <br>
+    <h2>sum = {{sum}}</h2>
+    <button @click="changeSum">Click sum++</button>
   </div>
 </template>
 
 <script setup lang="ts" name="Person">
-  import { ref, computed } from 'vue'
+  import { ref, watch } from 'vue'
 
-  let firstName = ref('peng')
-  let lastName = ref('bin')
+  let sum = ref(0)
+  function changeSum() {
+    sum.value++;
+  }
 
-  let fullName = computed(() => {
-    return firstName.value.slice(0,1).toUpperCase() + firstName.value.slice(1) + "-" + lastName.value
+  // can't watch ref.value, only watch ref
+  // so here is not sum.value
+  const stopWatch = watch(sum, (newValue, oldValue) => {
+    console.log(newValue, oldValue)
+    if (newValue > 10) stopWatch()
   })
 </script>
 
