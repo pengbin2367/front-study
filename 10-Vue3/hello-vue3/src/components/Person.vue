@@ -1,29 +1,20 @@
 <template>
   <div class="person">
-    <h1>one {{ car.band }} car, price {{ car.price }} w</h1>
-    <button @click="changePrice">update car price</button>
-    <br>
-    <h1>Games</h1>
-    <li v-for="g in games" :key="g.id">{{ g.name }}</li>
-    <button @click="changeGame">update</button>
+    FirstName: <input type="text" v-model="firstName" /><br>
+    LastName: <input type="text" v-model="lastName" /> <br>
+    Name: <span>{{fullName}}</span> <br>
   </div>
 </template>
 
 <script setup lang="ts" name="Person">
-  import { ref } from 'vue'
-  let car = ref({ band: 'benchi', price: 100 })
-  let games = ref([
-    { id:"1", name:"game1" },
-    { id:"2", name:"game2" },
-    { id:"3", name:"game3" },
-    { id:"4", name:"game4" }
-  ])
-  function changePrice() {
-    car.value.price += 10;
-  }
-  function changeGame() {
-    games.value[0].name = "game1 update"
-  }
+  import { ref, computed } from 'vue'
+
+  let firstName = ref('peng')
+  let lastName = ref('bin')
+
+  let fullName = computed(() => {
+    return firstName.value.slice(0,1).toUpperCase() + firstName.value.slice(1) + "-" + lastName.value
+  })
 </script>
 
 <style scoped>
