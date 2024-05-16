@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts" name="Person">
-  import { ref, watch } from 'vue'
+import {reactive, ref, watch, watchEffect} from 'vue'
 
   let sum = ref(0)
   function changeSum() {
@@ -26,22 +26,41 @@
     if (newValue > 10) stopWatch()
   })
 
-  let person = ref({
+  let person = reactive({
     name: "pengbin",
-    age: 23
+    age: 23,
+    car: {
+      c1: 'a',
+      c2: 'b'
+    }
   })
   function changeName() {
-    person.value.name = "pengbin-update"
+    person.name = "pengbin-update"
   }
   function changeAge() {
-    person.value.age = 3
+    person.age = 3
   }
   function changePerson() {
-    person.value = { name: "qingke", age: 2 }
+    person = Object.assign({ name: "qingke", age: 2 })
   }
+  // watch reactive obj open deep options default and can't close
   watch(person, (newValue, oldValue) => {
     console.log(newValue, oldValue)
-  }, {deep: true, immediate: true})
+  })
+  watch(() => person.name, (newValue, oldValue) => {
+    console.log(newValue, oldValue)
+  })
+  watch(() => person.car, (newValue, oldValue) => {
+    console.log(newValue, oldValue)
+  })
+  watch([() => person.age, () => person.car], (newValue, oldValue) => {
+    console.log(newValue, oldValue)
+  })
+  watchEffect(() => {
+    if (person.name === "qingke") {
+      console.log(6666666666666666)
+    }
+  })
 </script>
 
 <style scoped>
